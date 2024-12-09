@@ -62,7 +62,7 @@ st.subheader('User Input parameters')
 st.dataframe(df_display.T)
 
 
-df_model=pd.read_csv('df_model.csv',index_col=0)
+df_model=pd.read_csv('df_model.csv')
 X=df_model.drop('AboveState')
 y=df_model['AboveState']
 
