@@ -63,7 +63,7 @@ st.dataframe(df_display.T)
 
 
 df_model=pd.read_csv('df_model.csv')
-X=df_model.drop('AboveState')
+X=df_model.drop('AboveState',axis=1)
 y=df_model['AboveState']
 
 lr=LogisticRegression(C=.1,penalty='l2')
