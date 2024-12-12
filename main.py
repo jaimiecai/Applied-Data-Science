@@ -73,15 +73,15 @@ lr.fit(X,y)
 
 prediction=lr.predict(df)
 if prediction ==0:
-    prediction="Corporation Predicted to Have Score **Below** State Average"
+    pred_display="Corporation Predicted to Have Score **Below** State Average"
 else:
-    prediciton="Corporation Predicted to Have Score **Above** State Average"
+    pred_display="Corporation Predicted to Have Score **Above** State Average"
 prediction_proba=pd.DataFrame(lr.predict_proba(df))
 prediction_proba=prediction_proba.rename(columns={0:"Below State Average",1:"Above State Average"})
 
 
 st.subheader('Prediction')
-st.markdown(prediction)
+st.markdown(pred_display)
 
 
 st.subheader('Prediction Probability')
